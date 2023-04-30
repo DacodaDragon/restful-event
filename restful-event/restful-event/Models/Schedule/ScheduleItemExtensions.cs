@@ -1,4 +1,4 @@
-﻿namespace RestfulEvent.Models.Schedule
+﻿namespace RestfulEvents.Models.Schedule
 {
     public static class ScheduleItemExtensions
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Identity.Client;
 using System.Linq.Expressions;
 
-namespace restful_event.Utility
+namespace RestfulEvents.Utility
 {
     public static class Reflection
     {

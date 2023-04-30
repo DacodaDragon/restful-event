@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace RestulEvent.Migrations
+namespace RestfulEvents.Migrations
 {
     /// <inheritdoc />
     public partial class ScheduleType : Migration

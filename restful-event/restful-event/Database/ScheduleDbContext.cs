@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RestfulEvent.Models.Schedule;
+using RestfulEvents.Models.Schedule;
 
-namespace RestulEvent.Database
+namespace RestfulEvents.Database
 {
     public class ScheduleContext : DbContext
     {

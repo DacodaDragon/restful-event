@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using RestulEvent.Database;
+using RestfulEvents.Database;
 
-namespace RestulEvent
+namespace RestfulEvents
 {
     public class Program
     {

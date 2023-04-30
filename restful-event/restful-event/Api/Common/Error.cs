@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace restful_event.Api.Common
+namespace RestfulEvents.Api.Common
 {
     public enum ErrorCode
     {

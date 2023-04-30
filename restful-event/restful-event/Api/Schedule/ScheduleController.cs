@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using restful_event.Api.Common;
-using RestfulEvent.Api.Schedule.Dto;
-using RestfulEvent.Models.Schedule;
-using RestulEvent.Database;
+using RestfulEvents.Api.Common;
+using RestfulEvents.Api.Schedule.Dto;
+using RestfulEvents.Models.Schedule;
+using RestfulEvents.Database;
 
-namespace RestulEvent.Controllers.Schedule
+namespace RestfulEvents.Controllers.Schedule
 {
     /// <summary>
     /// Controls the schedule of panels and events

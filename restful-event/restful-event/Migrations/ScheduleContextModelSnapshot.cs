@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RestulEvent.Database;
+using RestfulEvents.Database;
 
 #nullable disable
 
-namespace RestulEvent.Migrations
+namespace RestfulEvents.Migrations
 {
     [DbContext(typeof(ScheduleContext))]
     partial class ScheduleContextModelSnapshot : ModelSnapshot

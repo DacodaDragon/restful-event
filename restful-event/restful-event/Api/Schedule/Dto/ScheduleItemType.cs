@@ -1,4 +1,4 @@
-﻿namespace RestfulEvent.Api.Schedule.Dto
+﻿namespace RestfulEvents.Api.Schedule.Dto
 {
     public enum ScheduleItemType : byte
     {

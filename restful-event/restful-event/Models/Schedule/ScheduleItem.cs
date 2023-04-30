@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace RestfulEvent.Models.Schedule
+namespace RestfulEvents.Models.Schedule
 {
     [PrimaryKey("Id")]
     public class ScheduleItemEntity : IScheduleItemEntity

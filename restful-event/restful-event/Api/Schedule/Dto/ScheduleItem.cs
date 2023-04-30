@@ -1,9 +1,9 @@
 ﻿
-using restful_event.Utility;
-using RestfulEvent.Models.Schedule;
+using RestfulEvents.Utility;
+using RestfulEvents.Models.Schedule;
 using System.ComponentModel.DataAnnotations;
 
-namespace RestfulEvent.Api.Schedule.Dto
+namespace RestfulEvents.Api.Schedule.Dto
 {
     public class ScheduleItem : IScheduleItemEntity
     {
