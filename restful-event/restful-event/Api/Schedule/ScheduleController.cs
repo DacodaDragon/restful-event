@@ -45,7 +45,7 @@ namespace RestfulEvents.Controllers.Schedule
         }
 
         [HttpGet]
-        public async Task<ActionResult<ScheduleItem>> GetScheduleItem(Guid id)
+        public ActionResult<ScheduleItem> GetScheduleItem(Guid id)
         {
             var entity = _scheduleContext.ScheduleEntries.Find(id);
 
@@ -56,7 +56,7 @@ namespace RestfulEvents.Controllers.Schedule
         }
 
         [HttpGet("all")]
-        public async Task<ActionResult<List<ScheduleItem>>> GetScheduleItem()
+        public ActionResult<List<ScheduleItem>> GetScheduleItem()
         {
             List<ScheduleItem> items = new();
             items.AddRange(_scheduleContext.ScheduleEntries.Select(item => item.ConvertToType<ScheduleItem>()));
