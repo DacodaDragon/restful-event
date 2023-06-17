@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using RestfulEvents.Api.Common;
 using RestfulEvents.Api.Schedule.Dto;
 using RestfulEvents.Models.Schedule;
 using RestfulEvents.Database;
+using RestfulEvents.Api;
 
 namespace RestfulEvents.Controllers.Schedule
 {
