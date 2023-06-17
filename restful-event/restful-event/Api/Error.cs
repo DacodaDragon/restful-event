@@ -5,6 +5,7 @@ namespace RestfulEvents.Api
     public enum ErrorCode
     {
         Generic,
+        Validation,
         EntryNotFound
     }
 
@@ -21,6 +22,11 @@ namespace RestfulEvents.Api
         public static BadRequestObjectResult EntityNotFound(string entityName, string valueName, string value)
         {
             return new BadRequestObjectResult(new Error(ErrorCode.EntryNotFound, $"Entity with {valueName} {value} has not been found."));
+        }
+
+        public static BadRequestObjectResult Validation(string message)
+        {
+            return new BadRequestObjectResult(new Error(ErrorCode.Validation, message));
         }
     }
 }
