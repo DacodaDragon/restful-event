@@ -9,7 +9,6 @@ namespace RestfulEvents.Api.Schedule.Dto
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { set; get; }
         public string? Name { get; set; }
-        public bool NameSpecified { get; set; }
 
         public string? Description { get; set; }
         public string? Author { get; set; }
