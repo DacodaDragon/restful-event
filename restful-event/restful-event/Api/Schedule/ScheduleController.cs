@@ -24,10 +24,10 @@ namespace RestfulEvents.Controllers.Schedule
         [HttpPut]
         public async Task<ActionResult<ScheduleItem>> AddScheduleItem(NewScheduleItem scheduleItem)
         {
-            var result = await _scheduleContext.ScheduleEntries.AddAsync(CreateAs<ScheduleItemEntity>(scheduleItem));
+            var result = await _scheduleContext.ScheduleEntries.AddAsync(scheduleItem.ConvertToType<ScheduleItemEntity>());
             await _scheduleContext.SaveChangesAsync();
             
-            return Ok(CreateAs<ScheduleItem>(result.Entity));
+            return Ok(result.Entity.ConvertToType<ScheduleItem>());
         }
 
         [HttpDelete]
@@ -59,15 +59,8 @@ namespace RestfulEvents.Controllers.Schedule
         public async Task<ActionResult<List<ScheduleItem>>> GetScheduleItem()
         {
             List<ScheduleItem> items = new();
-            items.AddRange(_scheduleContext.ScheduleEntries.Select(item => CreateAs<ScheduleItem>(item)));
+            items.AddRange(_scheduleContext.ScheduleEntries.Select(item => item.ConvertToType<ScheduleItem>()));
             return Ok(items);
-        }
-
-        public static ViewType CreateAs<ViewType>(IScheduleItemEntity source) where ViewType : IScheduleItemEntity, new()
-        {
-            ViewType view = new();
-            view.Copy(source);
-            return view;
         }
     }
 }

@@ -2,6 +2,13 @@
 {
     public static class ScheduleItemExtensions
     {
+        public static ViewType ConvertToType<ViewType>(this IScheduleItemEntity source) where ViewType : IScheduleItemEntity, new()
+        {
+            ViewType view = new();
+            view.Copy(source);
+            return view;
+        }
+
         public static void Copy(this IScheduleItemEntity target, IScheduleItemEntity source)
         {
             if (target is null) throw new ArgumentNullException(nameof(target));
