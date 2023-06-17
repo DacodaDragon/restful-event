@@ -42,6 +42,23 @@ namespace RestfulEvents.Controllers.Schedule
             return Ok();
         }
 
+        [HttpPatch]
+        public async Task<ActionResult<ScheduleItem>> UpdateScheduleItem(ScheduleItem scheduleItem)
+        {
+            var entity = _scheduleContext.ScheduleEntries.Find(scheduleItem.Id);
+
+            if (entity is null)
+                return Error.EntityNotFound(nameof(ScheduleItem), nameof(scheduleItem.Id), scheduleItem.Id.ToString());
+
+            entity.CopyFrom(scheduleItem);
+
+            _scheduleContext.Update(entity);
+
+            await _scheduleContext.SaveChangesAsync();
+            
+            return Ok(entity);
+        }
+
         [HttpGet("all")]
         public ActionResult<List<ScheduleItem>> GetScheduleItem()
         {

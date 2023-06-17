@@ -5,11 +5,11 @@
         public static ViewType ConvertToType<ViewType>(this IScheduleItemEntity source) where ViewType : IScheduleItemEntity, new()
         {
             ViewType view = new();
-            view.Copy(source);
+            view.CopyFrom(source);
             return view;
         }
 
-        public static void Copy(this IScheduleItemEntity target, IScheduleItemEntity source)
+        public static void CopyFrom(this IScheduleItemEntity target, IScheduleItemEntity source)
         {
             if (target is null) throw new ArgumentNullException(nameof(target));
             if (source is null) throw new ArgumentNullException(nameof(source));
